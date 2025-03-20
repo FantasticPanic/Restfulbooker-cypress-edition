@@ -1,4 +1,5 @@
 describe('Restful Booker Front end', () => {
+    
     beforeEach(() => {
         cy.visit('https://automationintesting.online/');
         Cypress.on('uncaught:exception', (err, runnable) => {
