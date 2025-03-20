@@ -10,7 +10,6 @@ describe('Restful Booker Front end', () => {
     
     
     it('Homepage image displays', () => {
-        //cy.get('img[alt="Hotel logoUrl"]').should('be.visible');
         cy.get('img[alt="Hotel logoUrl"]').as('logo');
         cy.get('@logo').should('have.attr', 'src', '/images/rbp-logo.jpg');
     });
