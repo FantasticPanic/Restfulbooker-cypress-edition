@@ -74,7 +74,7 @@ describe('Restful Booker Front end', () => {
         cy.get('input[name="lastname"]').type('User');
         cy.get('input[name="email"]').type('testuser123@email.com');
         cy.get('input[name="phone"]').type('123456789000');
-        
+        //fetch the dates for the calendar. May fail depending on date positions
         cy.get('button[class="rbc-button-link"]').contains('09').as('date1');
         cy.get('button[class="rbc-button-link"]').contains('10').as('date2');
         cy.get('button[class="rbc-button-link"]').contains('11').as('date3');
