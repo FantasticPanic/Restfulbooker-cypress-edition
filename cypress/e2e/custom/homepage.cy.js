@@ -32,7 +32,7 @@ describe('Restful Booker Front end', () => {
     })
 
     it('Danger alert when missing booking info', () => {
-        cy.get('img[alt="Preview image of room 101"]').scrollIntoView();
+        cy.get('h2').contains('Rooms').scrollIntoView();
         cy.get('.btn.btn-outline-primary.float-right.openBooking').first().click();
 
         cy.get('input[name="firstname"]').type('Test');
@@ -67,7 +67,7 @@ describe('Restful Booker Front end', () => {
     })
 
     it('Booking can sucessfully be submitted', () => {
-        cy.get('img[alt="Preview image of room 101"]').scrollIntoView();
+        cy.get('.contact').scrollIntoView();
         cy.get('.btn.btn-outline-primary.float-right.openBooking').first().click();
 
         cy.get('input[name="firstname"]').type('Test');
