@@ -7,10 +7,6 @@ describe('Restful Booker Front end', () => {
             return false
           })
     })
-
-    afterEach(() =>{
-
-    })
     
     
     it('Homepage image displays', () => {
