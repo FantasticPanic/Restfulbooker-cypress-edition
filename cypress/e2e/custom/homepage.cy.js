@@ -70,7 +70,7 @@ describe('Restful Booker Front end', () => {
         cy.get(':nth-child(2) > div > h2').contains("Thanks for getting in touch");
     })
 
-    it.only('Booking can sucessfully be submitted', () => {
+    it('Booking can sucessfully be submitted', () => {
         cy.get('img[alt="Preview image of room 101"]').scrollIntoView();
         cy.get('.btn.btn-outline-primary.float-right.openBooking').first().click();
 
@@ -78,7 +78,7 @@ describe('Restful Booker Front end', () => {
         cy.get('input[name="lastname"]').type('User');
         cy.get('input[name="email"]').type('testuser123@email.com');
         cy.get('input[name="phone"]').type('123456789000');
-
+        
         cy.get('button[class="rbc-button-link"]').contains('09').as('date1');
         cy.get('button[class="rbc-button-link"]').contains('10').as('date2');
         cy.get('button[class="rbc-button-link"]').contains('11').as('date3');
