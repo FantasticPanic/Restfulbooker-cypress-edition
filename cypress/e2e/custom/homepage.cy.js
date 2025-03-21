@@ -2,10 +2,14 @@ describe('Restful Booker Front end', () => {
     
     beforeEach(() => {
         cy.visit('https://automationintesting.online/');
-        Cypress.on('uncaught:exception', (err, runnable) => {
+         Cypress.on('uncaught:exception', (err, runnable) => {
             // returning false here prevents Cypress from
             // failing the test
+            if(
+              err.message.includes('Minified React error #418')   
+            ){
             return false
+            }
           })
     })
     
